@@ -20,9 +20,8 @@
     self.navigationBarHidden = NO;
     self.navigationBar.translucent = NO;
     
-//    self.navigationBar.tintColor =
-    self.navigationBar.backgroundColor = [UIColor whiteColor];
-//    self.navigationBar.barTintColor =
+    self.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationBar.barTintColor = [UIColor blueColor];
     self.navigationBar.titleTextAttributes = @{
                                                NSForegroundColorAttributeName: [UIColor whiteColor],
                                                NSFontAttributeName: [UIFont systemFontOfSize:19]};
@@ -44,6 +43,7 @@
 
 - (void)setCustomBackButton {
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [button setBackgroundColor:[UIColor greenColor]];
 //    button setImage:<#(nullable UIImage *)#> forState:[UIControlStateNormal];
     [button addTarget:self action:@selector(pop:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
